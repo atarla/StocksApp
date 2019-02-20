@@ -1,7 +1,7 @@
 import React from 'react';
 import {API_ROOT_URL} from "../../config";
 import Loading from '../common/Loading';
-import {handleResponse} from "../../helpers";
+import {handleResponse, renderChangePercent} from "../../helpers";
 import './Detail.css';
 
 class Detail extends React.Component {
@@ -70,6 +70,7 @@ class Detail extends React.Component {
                         <li className="list-group-item list-group-item-dark"><b>Market Cap</b>: {result.marketCap}</li>
                         <li className="list-group-item list-group-item-dark"><b>Latest Price</b>: {result.latestPrice}</li>
                         <li className="list-group-item list-group-item-dark"><b>YTDChange</b>: {result.ytdChange}</li>
+                        <li className="list-group-item list-group-item-dark"><b>Change%</b>: {renderChangePercent(result.changePercent)}</li>
                         <li className="list-group-item list-group-item-dark"><b>Sector</b>: {result.sector}</li>
                         <li className="list-group-item list-group-item-dark"><b>Related ...</b>: {related}</li>
                     </ul>

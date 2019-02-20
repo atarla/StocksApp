@@ -1,5 +1,5 @@
 import React from 'react';
-import {handleResponse} from "../../helpers";
+import {handleResponse, renderChangePercent} from "../../helpers";
 import {API_ROOT_URL} from "../../config";
 import Loading from "../common/Loading";
 import Table from './Table';
@@ -36,15 +36,7 @@ class List extends React.Component {
             });
     }
 
-    renderChangePercent(percent) {
-        if(percent>0) {
-            return <span className="percent-raised">{percent}% &uarr;</span>
-        }else if (percent < 0) {
-            return <span className="percent-fallen">{percent}% &darr;</span>
-        } else {
-            return <span>{percent}</span>
-        }
-    }
+
 
     render() {
         const { loading, error, mostActive } = this.state;
@@ -61,7 +53,7 @@ class List extends React.Component {
         return (
             <Table
                 mostActive={mostActive}
-                renderChangePercent={this.renderChangePercent}
+                renderChangePercent={renderChangePercent}
             />
         );
     }
