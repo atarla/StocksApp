@@ -1,13 +1,13 @@
 {
   "main.css": "/StocksApp/static/css/main.deb7192f.chunk.css",
-  "main.js": "/StocksApp/static/js/main.bbd7f104.chunk.js",
-  "main.js.map": "/StocksApp/static/js/main.bbd7f104.chunk.js.map",
+  "main.js": "/StocksApp/static/js/main.8ea94e91.chunk.js",
+  "main.js.map": "/StocksApp/static/js/main.8ea94e91.chunk.js.map",
   "runtime~main.js": "/StocksApp/static/js/runtime~main.8a4fc63f.js",
   "runtime~main.js.map": "/StocksApp/static/js/runtime~main.8a4fc63f.js.map",
   "static/js/2.d83f99fc.chunk.js": "/StocksApp/static/js/2.d83f99fc.chunk.js",
   "static/js/2.d83f99fc.chunk.js.map": "/StocksApp/static/js/2.d83f99fc.chunk.js.map",
   "index.html": "/StocksApp/index.html",
-  "precache-manifest.994d23ecca12a1dbe48fbfa44bab60e4.js": "/StocksApp/precache-manifest.994d23ecca12a1dbe48fbfa44bab60e4.js",
+  "precache-manifest.64de5cdefd882b47029d332199cccea5.js": "/StocksApp/precache-manifest.64de5cdefd882b47029d332199cccea5.js",
   "service-worker.js": "/StocksApp/service-worker.js",
   "static/css/main.deb7192f.chunk.css.map": "/StocksApp/static/css/main.deb7192f.chunk.css.map",
   "static/media/casalogo.svg": "/StocksApp/static/media/casalogo.dabe3c86.svg"

@@ -1,11 +1,11 @@
 self.__precacheManifest = [
   {
-    "revision": "bbd7f104dbeaa259408e",
+    "revision": "8ea94e917f318d31c9c6",
     "url": "/StocksApp/static/css/main.deb7192f.chunk.css"
   },
   {
-    "revision": "bbd7f104dbeaa259408e",
-    "url": "/StocksApp/static/js/main.bbd7f104.chunk.js"
+    "revision": "8ea94e917f318d31c9c6",
+    "url": "/StocksApp/static/js/main.8ea94e91.chunk.js"
   },
   {
     "revision": "8a4fc63f70d2bd2bbe7a",
@@ -20,7 +20,7 @@ self.__precacheManifest = [
     "url": "/StocksApp/static/media/casalogo.dabe3c86.svg"
   },
   {
-    "revision": "42d78891ba4f69bd3a9e31527524bbec",
+    "revision": "a75574864d53c8365aa077cf67d8f259",
     "url": "/StocksApp/index.html"
   }
 ];
