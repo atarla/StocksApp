@@ -1,6 +1,7 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import logo from '/Users/anusha/WebstormProjects/delete_react/src/casalogo.svg';
+import SearchBar from './SearchBar';
+import logo from '../../casalogo.svg';
 
 const Header = () => {
     return (
@@ -9,6 +10,7 @@ const Header = () => {
               <Link to="/">
                 <img src={logo} height="40" alt="logo" className="d-inline-block align-top" />
               </Link>
+              <SearchBar/>
           </nav>
       </div>
     );

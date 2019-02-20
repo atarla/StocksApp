@@ -11,6 +11,7 @@ class Detail extends React.Component {
         this.state = {
             result: [],
             news: [{}],
+            peers: [],
             loading: false,
             error: null,
         };
@@ -22,42 +23,31 @@ class Detail extends React.Component {
         this.setState({loading: true});
 
         Promise.all([fetch(`${API_ROOT_URL}/stock/${stocksSymbol}/quote`),
-            fetch(`${API_ROOT_URL}/stock/${stocksSymbol}/news`)])
+            fetch(`${API_ROOT_URL}/stock/${stocksSymbol}/news`),fetch(`${API_ROOT_URL}/stock/${stocksSymbol}/peers`)])
             // .then(handleResponse)
-            .then( ([result,news]) => Promise.all([result.json(),news.json()]))
-            .then(([result, news]) => {
+            .then( ([result,news,peers]) => Promise.all([result.json(),news.json(),peers.json()]))
+            .then(([result, news,peers]) => {
                 console.log(news);
                 this.setState({
                     result: result,
                     news: news,
+                    peers: peers,
                     loading: false,
                     error: null,
                 })
             })
 
-                // .then(handleResponse)
-            // .then(([result, news]) => {
-            //     this.setState({
-            //         loading: false,
-            //         error: null,
-            //         result: result,
-            //         news: news,
-            //     })
-            // })
-            // .catch((error) => {
-            //     this.setState({
-            //         loading: false,
-            //         error: error,
-            //     });
-            // })
     }
 
     render() {
-        const {loading, error, result, news } = this.state;
+        const {loading, error, result, news, peers } = this.state;
 
         const items = this.state.news.map((item, key) =>
-            <a href={item.url} target="_blank">
+            <a href={item.url} rel="noreferrer noopener" target="_blank">
                 <li className="list-group-item list-group-item-success" key={item.headline}>{item.headline} - {item.source}</li></a>);
+
+        const related = this.state.peers.map((item, index) =>
+                <span className="badge badge-pill badge-info" key={index}>{item}</span>);
 
         // Render only loading component if loading state is set to True
         if (loading) {
@@ -79,7 +69,9 @@ class Detail extends React.Component {
                     <ul className="list-group">
                         <li className="list-group-item list-group-item-dark"><b>Market Cap</b>: {result.marketCap}</li>
                         <li className="list-group-item list-group-item-dark"><b>Latest Price</b>: {result.latestPrice}</li>
+                        <li className="list-group-item list-group-item-dark"><b>YTDChange</b>: {result.ytdChange}</li>
                         <li className="list-group-item list-group-item-dark"><b>Sector</b>: {result.sector}</li>
+                        <li className="list-group-item list-group-item-dark"><b>Related ...</b>: {related}</li>
                     </ul>
                 </div>
             </div>

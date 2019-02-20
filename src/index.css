@@ -44,3 +44,8 @@ code {
 input::-ms-clear {
   display: none;
 }
+
+.list-group-item:hover, tr:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 24px rgba(32, 43, 54, .25);
+}

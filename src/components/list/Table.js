@@ -5,7 +5,7 @@ import Proptypes from 'prop-types';
 const Table = (props) => {
     const {mostActive, renderChangePercent, history} = props;
     return (
-        <div className="card bg-dark">
+        <div className="container card bg-dark">
             <div className="card-header text-info"><h5>Most Active Stocks Right Now</h5></div>
             <div className="card-body">
                 <table className="table table-striped table-hover table-dark">
