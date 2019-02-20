@@ -1,5 +1,4 @@
 import React from 'react';
-import Detail from '../../components/detail/Detail';
 import { withRouter } from "react-router-dom";
 import './SearchBar.css';
 
@@ -32,8 +31,9 @@ class SearchBar extends React.Component {
 
     render() {
         return (
-            <form onSubmit={this.handleSubmit}>
-                <input name="searchQuery" onChange={this.handleChange}/>
+            <form onSubmit={this.handleSubmit} className="Search">
+                <span className="Search-icon"><i class="fas fa-search"></i></span>
+                <input className="Search-input" name="searchQuery" type="search" onChange={this.handleChange} placeholder="Enter Stock Symbol" aria-label="Search" />
             </form>  
         );
     }
